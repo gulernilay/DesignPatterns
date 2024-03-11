@@ -1,0 +1,29 @@
+
+Iterator Pattern, nesne tabanlı programlamada kullanılan bir tasarım kalıbıdır. Bu kalıp, bir koleksiyonun (örneğin bir dizi, liste veya ağaç) elemanlarını sırayla erişmek ve dolaşmak için bir yol sağlar. Iterator Pattern, koleksiyonun yapısını değiştirmeden ve koleksiyonun içeriğini bilmeden elemanlarına erişim sağlar.
+
+Iterator Pattern'in temel bileşenleri şunlardır:
+
+Iterator: Koleksiyonun elemanlarını sırayla erişmek için kullanılan arayüz veya soyut sınıftır. Genellikle next(), hasNext(), remove() gibi metodlar içerir.
+next() metodu sıradaki elemanı döndürür,
+hasNext() metodu koleksiyonda daha eleman olup olmadığını kontrol eder,
+remove() metodu ise mevcut elemanı koleksiyondan siler.
+
+Concrete Iterator: Iterator arayüzünü veya soyut sınıfını uygulayan ve koleksiyonun elemanlarına erişim sağlayan sınıftır.
+
+Aggregate: Iterator nesneleri oluşturmak için kullanılan arayüz veya soyut sınıftır. Genellikle createIterator() gibi bir metod içerir.
+
+Concrete Aggregate: Aggregate arayüzünü veya soyut sınıfını uygulayan ve gerçek koleksiyonu içeren sınıftır. Bu sınıf, Concrete Iterator nesneleri oluşturur.
+
+Iterator Pattern'in kullanılmasının avantajları şunlardır:
+
+Koleksiyonun yapısı ve içeriği hakkında bilgi sahibi olmadan elemanlara erişim sağlar.
+Farklı koleksiyon tipleri için ortak bir arayüz sağlar, böylece kod tekrar kullanılabilirliği artar.
+Koleksiyonun dolaşılma şeklini değiştirmek istendiğinde sadece iterator sınıfı değiştirilerek kolayca yapılabilir.
+Iterator Pattern, özellikle koleksiyonların karmaşık olduğu veya farklı dolaşma yöntemlerinin gerektiği durumlarda yararlıdır.
+
+Iterator pattern= Cursor Pattern : var olan pozisyonun yerini bildirir
+Koleksiyonun teşhir etmeden dizinin bir sonraki değerine erişim sağlamak amaçtır.
+Koleksiyonda farklı şekildee gezinmek mümkün
+Koleksiyona erişim ve gezinme sorumluluuğu koleksiyondan iteratora geçiyor
+Behavioral Design Patterns
+

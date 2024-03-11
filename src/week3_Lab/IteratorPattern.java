@@ -1,4 +1,4 @@
-package week3_iterator;
+package week3_Lab;
 import java.util.ArrayList;
 import java.util.*;
 /*
@@ -52,14 +52,30 @@ public class IteratorPattern {
         AbstractIterator turkiyeIterator = new TurkiyeIterator((Collection) aggregate);
         System.out.println("Iterating over channels broadcasted in Türkiye:");
         printAggregate(turkiyeIterator);
-
+        // Create Frequency Iterator
         System.out.println("Please enters a number between “10 – 999”");
         int number= scanner.nextInt();
         AbstractIterator frequencyIterator=new FrequencyIterator((Collection) aggregate ,number);
         System.out.println("Iterating over channels that has frequency bw 0 and " +number);
         printAggregate(frequencyIterator);
 
+        // Create Default Iterator
+        AbstractIterator defaultIterator = aggregate.CreateIterator(IteratorType.DEFAULT, 0);
+        printAggregate(defaultIterator);
 
+        // Create TurkiyeIterator
+        AbstractIterator turkiyeIterator2 = aggregate.CreateIterator(IteratorType.TURKIYE, 0);
+        System.out.println("Iterating over channels broadcasted in Türkiye:");
+        printAggregate(turkiyeIterator);
+
+        // Create FrequencyIterator
+        System.out.println("Please enter a number between 10 and 999:");
+        int number2 = scanner.nextInt();
+        AbstractIterator frequencyIterator2 = aggregate.CreateIterator(IteratorType.FREQUENCY, number2);
+        System.out.println("Iterating over channels with frequency between 0 and " + number + ":");
+        printAggregate(frequencyIterator);
+
+        scanner.close();
     }
 }
 
@@ -98,6 +114,9 @@ class TurkiyeIterator implements AbstractIterator {
         }
     }
 }
+
+
+
 class FrequencyIterator implements AbstractIterator {
     private Collection _collection;
     private int _current;
@@ -134,11 +153,6 @@ class FrequencyIterator implements AbstractIterator {
         }
     }
 }
-
-
-
-
-
 
 
 
@@ -190,8 +204,7 @@ class CollectionIterator implements AbstractIterator {
 
 interface AbstractAggregate {
     AbstractIterator CreateIterator();
-    AbstractIterator CreateTurkiyeIterator();
-    AbstractIterator CreateFrequencyIterator(int maxFrequency);
+    AbstractIterator CreateIterator(IteratorType type, int data);
     void add(Channel channel);
     int getCount();
     Channel get(int index);

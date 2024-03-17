@@ -10,7 +10,7 @@ Component Interface/Abstract Class :Client tarafından erişilen ve Leaf ve Comp
 Leaf: Bireysel nesneleri temsil eder ve Component arayüzünün işlemlerini uygular. Kendi içinde çocukları olmayan nesnelerdir.
 Composite: Component arayüzünü uygular ve alt Component nesnelerini içerebilir. Bir Composite nesnesi, birden fazla Leaf ve/veya Composite nesnesi içerebilir. Add, Remove ve GetChild metotları, bu alt nesneleri yönetmek için kullanılır.
 Diagramın sağ alt köşesindeki döngüsel notasyon, Composite sınıfının bir işlemi yürütürken, içerdiği tüm Component nesneler üzerinde bu işlemi yürüteceğini gösterir (for each child in children child.Operation()). Bu, bir Composite nesnesinin bir operasyonu çağırdığı zaman, bu operasyonun tüm alt bileşenleri üzerinde tekrar edilerek uygulanacağını anlatır.
- */
+*/
 interface Component{
     void Add(Component d);
     void Remove(Component d);
@@ -51,13 +51,14 @@ class Composite implements Component{
     public void Add(Component d){
         components.add(d);
     }
-    public void Remove(Component d){
-        for(int i=0;i<components.size();i++){
-            if(components.get(i).getName()==d.getName()){
-                components.remove(i);
-                return;
+    @Override
+    public void Remove(Component d) {
+        String name=d.getName();
+        for (int a = 0; a < components.size(); a++) {
+            if (components.get(a).equals(name)) {
+                components.remove(a);
+                break;
             }
-
         }
     }
     public void Display(int id){
@@ -72,8 +73,9 @@ class Composite implements Component{
 
 public class Main {  // Client
     public static void main(String[] args) {
+
         //Create a tree structure:
-        Component root=new Composite("Picture");
+        Component root=new Composite("Electronics");
         root.Add(new Leaf("Red Line"));
         root.Add(new Leaf("Blue Circle"));
         root.Add(new Leaf("Green Box"));
@@ -88,6 +90,7 @@ public class Main {  // Client
         root.Add(comp2);
         root.Remove(comp);
         root.Display(2);
+
 
     }
 }

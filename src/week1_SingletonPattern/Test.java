@@ -1,7 +1,7 @@
 package week1_SingletonPattern;
 import java.util.ArrayList;
 import java.util.HashMap;
-
+/*
 class Singleton { // it allows creation of only one instance of Singleton.
     private static Singleton instance;
     String name;
@@ -89,3 +89,4 @@ public class Test {
     }
 }
 
+*/

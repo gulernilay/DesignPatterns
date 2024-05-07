@@ -1,0 +1,102 @@
+Soru: Restoran Yönetim Sistemi
+
+Bir restoran, işlerini daha verimli yönetmek için bir restoran yönetim sistemi geliştirmek istiyor. Sistem, müşteri siparişlerini alacak, menüyü yönetecek, siparişleri mutfak ekibine iletecek ve ödemeleri işleyecek.
+
+Restoranın menüsü, çeşitli yemek ve içeceklerden oluşacak.
+Müşteriler, menüden sipariş verebilecekler ve siparişlerini görebilecekler.
+Siparişler, mutfak ekibine iletilmeli ve hazır olduğunda servis edilmelidir.
+Müşteriler, hesaplarını görüntüleyebilmeli ve ödemelerini yapabilmelidir.
+Gereksinimler:
+
+Müşteri siparişlerini yönetmek için bir sipariş sistemi geliştirin.
+Menü öğelerini ve fiyatlarını saklamak için bir veri yapısı kullanın.
+Mutfak ekibine siparişleri iletmek için bir sipariş yönetim sistemi oluşturun.
+Müşterilerin hesaplarını görüntülemesini ve ödemelerini yapmasını sağlayacak bir ödeme sistemi entegre edin.
+
+
+
+
+Soru: Online Kütüphane Sistemi
+
+Bir online kütüphane, kitapları yönetmek ve kullanıcılara kitapları ödünç vermeyi kolaylaştırmak için bir sistem geliştirmek istiyor. Bu sistem, kullanıcıların kitap araması yapmasını, kitapları ödünç almasını, ödünç aldıkları kitapları yönetmesini ve iade etmesini sağlamalıdır.
+
+Kütüphanede bulunan kitaplar, kategoriye göre sıralanmalıdır (örneğin, romanlar, bilim kurgu, tarih, vb.).
+Kullanıcılar, kütüphanedeki kitapları arayabilmeli ve filtreleyebilmelidir.
+Kullanıcılar, seçtikleri kitapları ödünç alabilmeli ve ödünç aldıkları kitapları yönetebilmelidir (örneğin, iade tarihi kontrolü).
+Kullanıcılar, kütüphane kartı hesaplarını görüntüleyebilmeli ve güncelleyebilmelidir.
+Kütüphane personeli, kütüphane envanterini yönetebilmelidir (örneğin, yeni kitap eklemek veya mevcut kitapları kaldırmak).
+Gereksinimler:
+
+Kitapların saklanması ve yönetimi için bir veri tabanı kullanın.
+Kullanıcıların kitapları araması ve ödünç alması için bir arayüz sağlayın.
+Ödünç alınan kitapların süresini takip edin ve gecikmeleri yönetin.
+Kullanıcıların hesaplarını yönetmelerine izin veren bir kullanıcı yönetim sistemi oluşturun.
+Kütüphane personelinin envanteri yönetmesini sağlayacak bir arayüz sağlayın.
+
+
+
+
+Soru: Online Alışveriş Sistemi
+
+Bir online alışveriş platformu, kullanıcıların çeşitli ürünleri keşfetmelerini, satın almalarını ve siparişlerini yönetmelerini sağlayacak bir sistem geliştirmek istiyor. Bu sistem, kullanıcıların ürünleri aramasını, sepetlerine eklemesini, ödeme işlemlerini tamamlamasını ve siparişlerini takip etmesini sağlamalıdır.
+
+Platformda bulunan ürünler, kategorilere ve markalara göre sıralanmalıdır.
+Kullanıcılar, ürünleri arayabilmeli, filtreleyebilmeli ve detaylı bilgilerini görebilmelidir.
+Kullanıcılar, istedikleri ürünleri sepetlerine ekleyebilmeli ve sepetlerini yönetebilmelidir.
+Kullanıcılar, ödeme işlemlerini tamamlayabilmeli ve siparişlerini takip edebilmelidir.
+Admin kullanıcıları, ürünleri yönetebilmeli ve siparişleri görüntüleyebilmelidir.
+Gereksinimler:
+
+Ürünlerin saklanması ve yönetimi için bir veri tabanı kullanın.
+Kullanıcıların ürünleri araması ve sepetlerini yönetmesi için bir arayüz sağlayın.
+Ödeme işlemlerini tamamlamak için güvenli bir ödeme sistemi entegre edin.
+Admin kullanıcılarına yönetici paneli sağlayın, burada ürünleri ekleyebilir, düzenleyebilir ve siparişleri yönetebilirler.
+
+
+
+
+Soru: Film İzleme Platformu
+
+Bir film izleme platformu, kullanıcıların çeşitli filmleri keşfetmelerini, izlemelerini ve favori listelerine eklemelerini sağlayacak bir sistem geliştirmek istiyor. Bu sistem, kullanıcıların film aramasını, filmleri izlemesini, değerlendirmesini ve favori listelerini yönetmesini sağlamalıdır.
+
+Platformda bulunan filmler, kategorilere ve türlerine göre sıralanmalıdır (örneğin, aksiyon, komedi, dram vb.).
+Kullanıcılar, istedikleri filmleri arayabilmeli, filtreleyebilmeli ve detaylı bilgilerini görebilmelidir.
+Kullanıcılar, sevdikleri filmleri izleyebilmeli, izleme geçmişlerini görebilmeli ve filmlere puan verebilmelidir.
+Kullanıcılar, favori listelerine filmler ekleyebilmeli ve bu listeleri yönetebilmelidir.
+Yöneticiler, platforma yeni filmler ekleyebilmeli ve mevcut filmleri düzenleyebilmelidir.
+Gereksinimler:
+
+Filmlerin saklanması ve yönetimi için bir veri tabanı kullanın.
+Kullanıcıların filmleri araması ve izlemesi için bir arayüz sağlayın.
+Filmlere puan verilmesini ve favori listelerin yönetilmesini sağlayan bir kullanıcı yönetim sistemi oluşturun.
+Yöneticiler için bir yönetici paneli sağlayın, burada film ekleyebilir, düzenleyebilir ve silinebilirler.
+
+
+
+
+
+Soru: Etkinlik Yönetim Sistemi
+
+Bir etkinlik yönetimi şirketi, etkinliklerin planlanması, organizasyonu ve yönetimi için bir sistem geliştirmek istiyor. Bu sistem, etkinliklerin oluşturulmasını, katılımcıların kaydedilmesini, bilet satışlarını yönetmeyi ve etkinliklerin takibini sağlamalıdır.
+
+Etkinlikler, tarih, konum, kategori ve diğer özelliklere göre planlanmalıdır.
+Katılımcılar, etkinliklere kaydolabilmeli ve bilet satın alabilmelidir.
+Organizatörler, etkinlik detaylarını yönetebilmeli, bilet satışlarını izleyebilmeli ve katılımcıları yönetebilmelidir.
+Etkinlik gününde, katılımcılar kaydedilmeli ve giriş kontrolü yapılmalıdır.
+Sonrasında, etkinliğin başarısını değerlendirmek ve raporlamak için veri toplanmalıdır.
+Gereksinimler:
+
+Etkinliklerin ve katılımcıların saklanması ve yönetimi için bir veri tabanı kullanın.
+Katılımcıların etkinliklere kaydolması ve bilet satın alması için bir kullanıcı arayüzü sağlayın.
+Organizatörler için bir yönetici paneli sağlayın, burada etkinlikler oluşturulabilir, düzenlenebilir ve katılımcılar yönetilebilir.
+Etkinlik gününde, katılımcıların giriş kontrolünü sağlayacak bir arayüz oluşturun.
+
+
+
+
+
+
+
+
+
+

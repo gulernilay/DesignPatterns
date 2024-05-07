@@ -1,0 +1,176 @@
+Senaryo: Otomobil Motoru Çalıştırma
+
+Bir otomobilin motorunu çalıştırmak için çeşitli alt sistemler vardır. Motorun çalıştırılması için bu alt sistemlerin birbiriyle iletişim kurması ve belirli bir sırayla işlemlerin gerçekleştirilmesi gerekir. Bu durumda Facade tasarım deseni, karmaşık alt sistemlerin kullanıcıya basitleştirilmiş bir arabirim sağlamak için kullanılabilir.
+Gerçek zamanlı bir senaryoda, bu tasarım deseni, karmaşık alt sistemlerin kullanımını basitleştirerek sistemin daha iyi organize edilmesine ve bakımının yapılmasına yardımcı olabilir.
+
+
+
+Soru: Banka Hesap İşlemleri
+
+Bir banka, müşterilerinin hesap işlemlerini yönetmek için bir sistem geliştirmek istiyor. Bu sistem, müşterilerin hesap bakiyelerini kontrol etmelerini, para yatırma, para çekme ve transfer gibi işlemleri gerçekleştirmelerini sağlamalıdır. Facade tasarım deseni kullanarak bu işlemleri basitleştirecek bir sistem tasarlayın.
+
+Gereksinimler:
+
+Müşteriler, hesap bakiyelerini kontrol edebilmelidir.
+Müşteriler, hesaplarına para yatırabilmeli ve hesap bakiyelerini güncelleyebilmelidir.
+Müşteriler, hesaplarından para çekebilmeli ve hesap bakiyelerini güncelleyebilmelidir.
+Müşteriler, başka bir hesaba para transferi yapabilmelidir.
+Sistem, işlemleri güvenli bir şekilde gerçekleştirmelidir.
+
+
+
+Soru: Online Alışveriş Sepeti Yönetimi
+
+Bir online alışveriş platformu, müşterilerin alışveriş sepetini yönetmek için bir sistem geliştirmek istiyor. Bu sistem, müşterilerin sepete ürün eklemesini, sepetten ürün çıkarmasını ve ödeme işlemlerini gerçekleştirmesini sağlamalıdır. Facade tasarım desenini kullanarak bu işlemleri basitleştirecek bir sistem tasarlayın.
+
+Gereksinimler:
+
+Müşteriler, alışveriş sırasında ürünleri sepetlerine ekleyebilmelidir.
+Müşteriler, sepetlerinden istedikleri ürünleri çıkarabilmelidir.
+Müşteriler, sepetlerindeki ürünleri görüntüleyebilmelidir.
+Müşteriler, ödeme işlemlerini tamamlayabilmelidir.
+Sistem, müşterilerin güvenli bir şekilde ödeme yapmasını sağlamalıdır.
+
+
+
+Soru: Otel Rezervasyon Sistemi
+
+Bir otel, müşterilerin otel rezervasyonlarını yönetmek için bir sistem geliştirmek istiyor. Bu sistem, müşterilerin oda rezervasyonlarını yapmasını, rezervasyonları görüntülemesini, değiştirmesini ve iptal etmesini sağlamalıdır. Facade tasarım desenini kullanarak bu işlemleri basitleştirecek bir sistem tasarlayın.
+
+Gereksinimler:
+
+Müşteriler, otel rezervasyonu yapabilmelidir.
+Müşteriler, rezervasyonlarını görüntüleyebilmeli, değiştirebilmeli ve iptal edebilmelidir.
+Otel personeli, rezervasyonları yönetebilmelidir.
+Sistem, müşterilerin güvenli bir şekilde rezervasyon yapmasını sağlamalıdır.
+
+
+
+
+
+
+Soru: Fatura Ödeme Sistemi
+
+Bir fatura ödeme hizmeti sağlayıcısı, müşterilerin fatura ödemelerini yönetmeleri için bir sistem geliştirmek istiyor. Bu sistem, müşterilerin fatura bilgilerini görüntülemesini, fatura ödemelerini yapmasını ve ödeme geçmişini takip etmesini sağlamalıdır. Facade tasarım desenini kullanarak bu işlemleri basitleştirecek bir sistem tasarlayın.
+
+Gereksinimler:
+
+Müşteriler, fatura bilgilerini görüntüleyebilmelidir.
+Müşteriler, fatura ödemelerini yapabilmelidir.
+Müşteriler, ödeme geçmişlerini görüntüleyebilmelidir.
+Sistem, müşterilerin güvenli bir şekilde ödeme yapmasını sağlamalıdır.
+
+
+
+
+
+
+
+Soru: Ürün Takip Sistemi
+
+Bir lojistik şirketi, müşterilerin gönderilerini takip etmeleri için bir sistem geliştirmek istiyor. Bu sistem, müşterilerin gönderi durumlarını sorgulamasını, gönderilerini izlemesini ve varış zamanlarını kontrol etmesini sağlamalıdır. Facade tasarım desenini kullanarak bu işlemleri basitleştirecek bir sistem tasarlayın.
+
+Gereksinimler:
+
+Müşteriler, gönderi numaralarını girerek gönderi durumunu sorgulayabilmelidir.
+Müşteriler, gönderilerini izleyebilmelidir.
+Müşteriler, gönderilerinin tahmini varış zamanını kontrol edebilmelidir.
+Sistem, müşterilerin güvenli bir şekilde gönderi bilgilerini sorgulamasını sağlamalıdır.
+
+
+
+
+
+Soru: Yemek Siparişi Uygulaması
+
+Bir yemek siparişi uygulaması geliştiriliyor. Bu uygulama, kullanıcıların restoran menülerini görüntülemesini, yemek siparişi vermesini ve ödemeyi tamamlamasını sağlamalıdır. Facade tasarım desenini kullanarak bu işlemleri basitleştirecek bir sistem tasarlayın.
+
+Gereksinimler:
+
+Kullanıcılar, restoran menülerini görebilmeli ve yemek seçimlerini yapabilmelidir.
+Kullanıcılar, seçtikleri yemekleri sepete ekleyebilmelidir.
+Kullanıcılar, sepetlerini görüntüleyebilmeli, seçtikleri yemekleri düzenleyebilmeli ve çıkarabilmelidir.
+Kullanıcılar, ödeme işlemlerini tamamlayabilmelidir.
+Sistem, kullanıcıların güvenli bir şekilde ödeme yapmasını sağlamalıdır.
+
+
+
+
+
+
+
+
+
+Soru: Kargo Takip Sistemi
+
+Bir kargo şirketi, müşterilerin gönderilerini takip etmeleri için bir sistem geliştirmek istiyor. Bu sistem, müşterilerin gönderi numaralarını kullanarak gönderi durumunu sorgulamasını, gönderilerini izlemesini ve varış zamanlarını kontrol etmesini sağlamalıdır. Facade tasarım desenini kullanarak bu işlemleri basitleştirecek bir sistem tasarlayın.
+
+Gereksinimler:
+
+Müşteriler, gönderi numaralarını girerek gönderi durumunu sorgulayabilmelidir.
+Müşteriler, gönderilerini izleyebilmelidir.
+Müşteriler, gönderilerinin tahmini varış zamanını kontrol edebilmelidir.
+Sistem, müşterilerin güvenli bir şekilde gönderi bilgilerini sorgulamasını sağlamalıdır.
+
+
+
+
+
+
+
+Soru: Öğrenci Bilgi Sistemi
+
+Bir okul, öğrencilerin ders notlarını görüntülemesi ve akademik bilgilerini takip etmesi için bir sistem geliştirmek istiyor. Bu sistem, öğrencilerin ders notlarını sorgulamasını, ders programlarını görüntülemesini ve devamsızlık durumlarını kontrol etmesini sağlamalıdır. Facade tasarım desenini kullanarak bu işlemleri basitleştirecek bir sistem tasarlayın.
+
+Gereksinimler:
+
+Öğrenciler, ders notlarını sorgulayabilmelidir.
+Öğrenciler, ders programlarını görüntüleyebilmelidir.
+Öğrenciler, devamsızlık durumlarını kontrol edebilmelidir.
+Sistem, öğrencilerin güvenli bir şekilde akademik bilgilerini sorgulamasını sağlamalıdır.
+
+
+
+
+
+
+Soru: Müşteri İlişkileri Yönetimi (CRM) Sistemi
+
+Bir şirket, müşteri ilişkilerini yönetmek için bir CRM sistemi oluşturmak istiyor. Bu sistem, müşteri bilgilerini görüntülemeyi, müşteri taleplerini takip etmeyi ve müşteri iletişimini kolaylaştırmayı amaçlamaktadır. Facade tasarım desenini kullanarak bu işlemleri basitleştirecek bir sistem tasarlayın.
+
+Gereksinimler:
+
+Çalışanlar, müşteri bilgilerini görüntüleyebilmelidir.
+Çalışanlar, müşteri taleplerini kaydedebilmeli ve takip edebilmelidir.
+Çalışanlar, müşterilerle iletişim kurabilmelidir (örneğin, e-posta gönderme).
+Sistem, çalışanların güvenli bir şekilde müşteri bilgilerine erişimini sağlamalıdır.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

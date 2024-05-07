@@ -9,10 +9,6 @@ package Facade.Example1;
 //		- implement subsystem functionality.
 //		- handle work assigned by the Facade object.
 //		- have no knowledge of the facade and keep no reference to it.
-//Mortgage sınıfının kredi uygunluğunu değerlendirmek için kullanılan alt sistemlerdir.
-
-
-
 
 // Client class. "Customer"    :
 class Customer {
@@ -21,21 +17,21 @@ class Customer {
     public String getName() {return name;}
 }
 // Subsystem Class 1. "Bank"
-class Bank { // Check the money in the bank account of customer
+class Bank {
     public Boolean HasSufficientSavings(Customer c, int amount) {
         System.out.println("Check bank balance of " + c.getName() +
                 " for the amount " + amount);
         return true;
     }
 }
-// Subsystem Class 2. "Credit" :müşterinin kredi geçmişini kontrol eder. Müşterinin kredi skorunu ve geçmişini analiz eder ve mevcut durumuyla uygun olup olmadığını belirler.
+// Subsystem Class 2. "Credit"
 class Credit {
     public Boolean HasGoodCredit(Customer c) {
         System.out.println("Check credit for " + c.getName());
         return true;
     }
 }
-// Subsystem Class 3. "Loan" :Bu metod, müşterinin kötü kredi geçmişini kontrol eder. Yani, müşterinin daha önce almış olduğu kötü kredileri araştırır ve mevcut durumuyla uygun olup olmadığını belirler.
+// Subsystem Class 3. "Loan"
 class Loan {
     public Boolean HasNoBadLoans(Customer c) {
         System.out.println("Check outstanding loans for " + c.getName());
@@ -45,9 +41,8 @@ class Loan {
 
 
 
-// Facade. "Mortgage" :Mortgage sınıfı, müşterinin kredi uygunluğunu belirlemek için Bank, Loan ve Credit alt sistemlerini kullanır.
+// Facade. "Mortgage"
 class Mortgage {
-    //Bu alt sınıflar, Mortgage sınıfının içinde yaratılır.
     private	Bank bank;
     private Loan loan;
     private Credit credit;
@@ -56,20 +51,19 @@ class Mortgage {
         loan = new Loan();
         credit = new Credit();
     }
-    //bir müşterinin kredi uygunluğunu belirler. Müşterinin adı ve kredi talep edilen miktarı parametre olarak alır. Ardından, müşterinin kredi uygunluğunu değerlendirmek için alt sistemlerle etkileşime girer.
+
     public Boolean IsEligible(Customer cust, int amount) {
         System.out.println(cust.getName() + " applies for " + amount + "TL loan");
         Boolean eligible = true;
 
-        // Check creditworthiness of applicant :Banka alt sistemine müşterinin hesap bakiyesi ve talep edilen kredi miktarını gönderir. Banka, müşterinin yeterli bir tasarrufunun olup olmadığını kontrol eder.
         if (!bank.HasSufficientSavings(cust, amount)) {
             eligible = false;
         }
-        //Loan alt sistemine müşteriyi gönderir ve müşterinin kötü kredi geçmişinin olup olmadığını kontrol eder.
+
         else if (!loan.HasNoBadLoans(cust)) {
             eligible = false;
         }
-        //Credit alt sistemine müşteriyi gönderir ve müşterinin iyi bir kredi geçmişine sahip olup olmadığını kontrol eder.
+
         else if (!credit.HasGoodCredit(cust)) {
             eligible = false;
         }

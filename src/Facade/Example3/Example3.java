@@ -50,16 +50,13 @@ class Schedule{
     public void DisplaySchedule(Student st){
         System.out.println("The student with number " + "" +st +" schedule is displayed below. " );
     }
-
 }
 //Subsystem3
 class Absenteeism{
     public void DisplayAbsenteeism(Student st){
         System.out.println("The student with number " + "" +st +" has 3 days absent. " );
     }
-
 }
-
 
 public class Example3 {
     public static void main(String[] args) {

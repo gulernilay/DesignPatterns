@@ -1,4 +1,4 @@
-package week1_SingletonPattern;
+package Singleton;
 import java.util.ArrayList;
 import java.util.HashMap;
 /*

@@ -10,6 +10,7 @@ interface PrimeFinder {
 }
 
 // SimplePrimeFinder class (Adaptee)
+
 class SimplePrimeFinder {
     public String findPrimes(int limit) {
         String primes = "";
@@ -32,7 +33,7 @@ class SimplePrimeFinder {
     }
 }
 
-// Class Adapter for SimplePrimeFinder
+// Class Adapter for SimplePrimeFinder :SimplePrimeFinder sınıfının findPrimes metodunu, PrimeFinder arayüzündeki sievePrimes metoduna uydurmak için kullanılıyor.Yani, PrimeFinder arayüzü üzerinden kullanılabilen sievePrimes metodunu kullanmak için SimplePrimeFinder sınıfı adapte ediliyor
 class PrimeFinderAdapter implements PrimeFinder {
     private SimplePrimeFinder simplePrimeFinder;
 

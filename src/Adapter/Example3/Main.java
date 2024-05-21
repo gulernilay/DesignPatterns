@@ -1,16 +1,16 @@
 package Adapter.Example3;
 
-// Monitör sınıfı, HDMI arabirimini uyguluyor.
+// target1 connects to target2
 interface HDMI {
     void connectHDMI();
 }
 
-// Hedef Arabirim
+// target2
 interface VGA {
     void connectVGA();
 }
 
-// Adapte edilecek sınıf
+// Adaptee connects to target1
 class Monitor implements HDMI {
     @Override
     public void connectHDMI() {
@@ -18,9 +18,9 @@ class Monitor implements HDMI {
     }
 }
 
-// Object Adaptor :  HDMI arabirimini VGA arabirimine dönüştüren adapter sınıfı
+// Object Adapter implements target
 class HDMItoVGAAdapter implements VGA {
-    private HDMI hdmiMonitor;
+    private HDMI hdmiMonitor; // adaptee object
 
     public HDMItoVGAAdapter(HDMI hdmiMonitor) {
         this.hdmiMonitor = hdmiMonitor;
@@ -47,9 +47,3 @@ public class Main {
     }
 }
 
-/*
-Bu örnekte, bir nesne adaptörü (object adapter) kullandım. Nesne adaptörü, adapte edilecek sınıfı (HDMI) bir örneği olarak içerir ve hedef arabirimi (VGA) uygular. Adapter sınıfı, adapte edilecek sınıfın örneğini alır ve hedef arabirimdeki metotları çağırarak adaptasyon işlemini gerçekleştirir.
-
-Yani, HDMItoVGAAdapter sınıfı, VGA arabirimini uygulayan bir sınıf olarak tasarlanmıştır. Bu sınıfın yapıcı metodunda, adaptasyon için bir HDMI nesnesi alınır ve connectVGA() metodunu çağırdığında, aslında içindeki HDMI nesnesinin connectHDMI() metodunu çağırmaktadır. Bu, nesne adaptörü deseninin bir örneğidir.
-
- */

@@ -16,18 +16,12 @@ package Adapter.Example1;
 //This uses Objects Adapter.
 //============================================================================
 
-//This the  "Target" class.
-//North America Socket. Our
-//device is manufactured for to be
-//used with a North American Socket.
 
-interface NASocket {
+interface NASocket {   //Target class
     int usingNASocket();
 }
-//This is the "Adaptee" class. Continential Europe Socket
-//The device will be used in Europe which has different sockets.
 
-class EURSocket {
+class EURSocket {  // Adaptee class which will try to connect target class
     public int usingEURSocket() {
         System.out.println(
                 "Giving you 220 Volt using Europe Connection.");
@@ -35,39 +29,29 @@ class EURSocket {
     }
 }
 
-// This is the "Adapter" class. ConnectorAdapterNAtoEUR.
-// We need a connector so our device works.
-
-class ConnectorAdapterNAtoEUR implements NASocket {
-    public int usingNASocket() {
-        // Possibly do some other work and then call
-        // usingEURSocket from the European socket.
-        int voltage = _adaptee.usingEURSocket();
-        return voltage;
-    }
+class ConnectorAdapterNAtoEUR implements NASocket {   // Adapter Class which we need a connector so our device works.
+    private EURSocket _adaptee; // Object adapter :composition
     ConnectorAdapterNAtoEUR (EURSocket adaptee) {
         _adaptee = adaptee;
     }
-    private EURSocket _adaptee;
+    public int usingNASocket() {
+        // Possibly do some other work and then call usingEURSocket from the European socket.
+        int voltage = _adaptee.usingEURSocket();
+        return voltage;
+    }
 }
 //Utility Class.
-
 class VCR {
     public void powerUp(int voltage) { System.out.println("Powered up");}
 }
 
-// This is our client which will be using
-// the Target (NASocket) Interface.
-
+// This is our client which will be using the Target (NASocket) Interface.
 public class ObjectAdapter {
     public static void main(String[] args) {
 
         // Create adapter and place a request
-        NASocket socket = new ConnectorAdapterNAtoEUR (
-                new EURSocket()
-        );
-        // socket is-a North American socket. So our North
-        // American device can connect.
+        NASocket socket = new ConnectorAdapterNAtoEUR (new EURSocket());
+        // socket is-a North American socket. So our North American device can connect.
         int voltage = socket.usingNASocket();
         VCR vcr = new VCR();
         vcr.powerUp(voltage);
@@ -79,7 +63,7 @@ public class ObjectAdapter {
 Adapter deseni, bir sınıfın arabirimini başka bir sınıfın beklediği arabirime dönüştürmek için kullanılan bir yapısal desen olarak bilinir.
 Bu desen, mevcut bir sınıfı, istemci kodunun kullanabileceği farklı bir arabirime sahip bir sınıfa uyarlamak için kullanılır.
 
-Nesne Adaptörü (Object Adapter):
+Nesne Adaptörü (Object Adapter):Composition
 Bu yaklaşımda, adaptör sınıfı, adapte edilecek sınıfın bir örneğini içerir.
 Adapte edilen sınıfın tüm davranışlarını (metodları ve özellikleri) kendi içinde kullanarak, istemciye uygun bir arabirim sunar.
 

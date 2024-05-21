@@ -1,19 +1,19 @@
 package Adapter.Example4;
 // Class Adapter örneği
 
-// Adapte edilecek olan Sınıf
+// Adaptee
 class HDMI {
     void connectHDMI() {
         System.out.println("HDMI ile monitör bağlantısı yapıldı.");
     }
 }
 
-// Hedef Arabirim
+// target
 interface VGA {
     void connectVGA();
 }
 
-// Nesne Adaptörü (Class Adapter)
+// class adapter extends adaptee implements target
 class HDMItoVGAAdapter extends HDMI implements VGA {
     @Override
     public void connectVGA() {
@@ -27,7 +27,6 @@ public class Example4 {
     public static void main(String[] args) {
         // HDMI'ı VGA'ya dönüştüren adaptör oluştur
         VGA vgaMonitor = new HDMItoVGAAdapter();
-
         // VGA ile monitör bağlantısı yap
         vgaMonitor.connectVGA();
     }

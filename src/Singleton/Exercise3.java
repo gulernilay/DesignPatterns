@@ -13,7 +13,7 @@ import java.util.concurrent.locks.ReentrantLock;
 //		creating and maintaining its own unique instance
 
 //This is the "Singleton" class.
-
+/*
 class LoadBalancer {
     // Thread Safe Load Balancer with Double Checked Locking
     public static LoadBalancer GetLoadBalancer() {
@@ -107,3 +107,4 @@ public class Exercise3 {
         t3.start();
     }
 }
+*/

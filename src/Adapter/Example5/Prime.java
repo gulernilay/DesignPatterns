@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 /*
 class SimplePrimeFinder {
+
     public String findPrimes(int limit) {
         String primes = "";
         for (int number = 2; number <= limit; number++) {
@@ -24,7 +25,7 @@ class SimplePrimeFinder {
         return true;
     }
 }
-*/
+
 
 
 // Testing the prime finders
@@ -36,4 +37,4 @@ public class Prime {
         int limit = scan.nextInt();
         System.out.println("Primes found by Simple Prime Finder: " + simplePrimeFinder.findPrimes(limit));
     }
-}
+}*/
